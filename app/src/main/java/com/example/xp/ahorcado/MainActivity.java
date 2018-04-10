@@ -13,6 +13,7 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
     String palabraOculta = "CETYS";
     int numeroFallos=0;
+   
 
 
 
@@ -44,9 +45,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void botonPulsado(View vista){
+        ImageView imagenAhorcado = ((ImageView)findViewById(R.id.imagenAhorcado));
+        TextView textoGuiones = ((TextView) findViewById(R.id.palabraConGuiones));
+        String palabraConGuiones = textoGuiones.getText().toString();
+
+
+
+
         Button boton =(Button) findViewById(vista.getId());
         boton.setVisibility(View.INVISIBLE);
         chequeaLetra(boton.getText().toString());
+
+
+        if(!palabraConGuiones.contains("_")||numeroFallos==5){
+
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
+        }
 
 
     }
@@ -82,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
         //chequeo si se ha terminado la partida porque ha acertado todas las letras
         if(!palabraConGuiones.contains("_")){
             imagenAhorcado.setImageResource(R.drawable.acierto);
+
         }
 
         textoGuiones.setText(palabraConGuiones);
@@ -98,6 +115,8 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+
+
     }
 
     private String escogePalabra(){
@@ -109,6 +128,9 @@ public class MainActivity extends AppCompatActivity {
         return auxiliar;
 
         }
+
+
+
 
     }
 
