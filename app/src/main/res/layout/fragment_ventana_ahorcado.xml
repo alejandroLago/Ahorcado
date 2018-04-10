@@ -25,7 +25,7 @@
         android:layout_height="0dp"
         android:layout_weight="15"
         android:background="@color/colorAccent"
-        android:src="@drawable/ahorcado_0" />
+        android:src="@drawable/primera" />
 
     <LinearLayout
         android:layout_width="wrap_content"

@@ -89,12 +89,12 @@ public class MainActivity extends AppCompatActivity {
         if(!acierto){
             numeroFallos++;
             switch (numeroFallos){
-                case 0 : imagenAhorcado.setImageResource(R.drawable.PrimeraVida);break;
-                case 1 : imagenAhorcado.setImageResource(R.drawable.segundaVida);break;
+                case 0 : imagenAhorcado.setImageResource(R.drawable.primera);break;
+                case 1 : imagenAhorcado.setImageResource(R.drawable.segunda);break;
                 case 2 : imagenAhorcado.setImageResource(R.drawable.tercera);break;
                 case 3 : imagenAhorcado.setImageResource(R.drawable.cuarta);break;
                 case 4 : imagenAhorcado.setImageResource(R.drawable.quinta);break;
-                default : imagenAhorcado.setImageResource(R.drawable.ahorcado_fin );break;
+                default : imagenAhorcado.setImageResource(R.drawable.fin);break;
             }
         }
 
